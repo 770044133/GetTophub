@@ -28,33 +28,6 @@ func main(){
 }
 
 func gethot(c *gin.Context) {
-	message := "未知错误"
-	url := "https://tophub.today/"
-	timeout := time.Duration(15 * time.Second)
-	client := &http.Client{
-		Timeout: timeout,
-	}
-	var Body io.Reader
-	request, err := http.NewRequest("GET", url, Body)
-	if err != nil {
-		message = "抓取失败"
-		c.String(200, message)
-		return
-	}
-	res, err := client.Do(request)
-	if err != nil {
-		message = "抓取失败"
-		c.String(200, message)
-		return
-	}
-	defer res.Body.Close()
-	document, err := goquery.NewDocumentFromReader(res.Body)
-	if err != nil {
-		message = "抓取失败"
-		c.String(200, message)
-		return
-	}
-
 	var allData []map[string]interface{}
 	sort_url := "https://tophub.today/c/developer"
 	sort_timeout := time.Duration(15 * time.Second)
