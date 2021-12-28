@@ -9,6 +9,6 @@
 
 已经部署在个人服务器上，用php写了一个简单的接口。
 
-接口地址：www.mysqlschool.cn/gethot.php
+接口地址：www.mysqlschool.cn/api/gethot.php
 
 ![image](https://user-images.githubusercontent.com/55128887/146345882-9a932557-594d-4dcf-aa69-38333e13173c.png)
